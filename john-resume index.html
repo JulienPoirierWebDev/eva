@@ -1,293 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="styles.css">
-	<head> 
-	<title>Portfolio</title>
-			<header>
-					<nav class="hidden">
-						<ul>   
-								<h1><a href="#works" class="nav-item">Works</a></h1>
-								<h2><a href="#blog" class="nav-item">Blog</a></h2>
-								<h3><a href="#contact" class="nav-item">Contact</a></h3>
-							</ul>
-							</nav>
-					</header>
-								<img class="hero__image" src="file:///C:/Users/evaas/OneDrive/Desktop/My%20Samsung%20galaxy%20A53s/Document/Webitech/Html%20CDA%20%202024-2025/John-resume/image/john.png " alt="john.png " />
-							<div> 
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles.css" />
+		<meta charset="UTF-8" />
+		<title>Portfolio</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			/* Style the body */
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 0;
+			}
+
+			/* Header/logo Title */
+			.header {
+				padding: 80px;
+				text-align: center;
+				background: #1abc9c;
+				color: white;
+			}
+
+			/* Increase the font size of the heading */
+			.header h1 {
+				font-size: 40px;
+			}
+
+			/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+			.navbar {
+				overflow: hidden;
+				background-color: #333;
+				position: sticky;
+				position: -webkit-sticky;
+				top: 0;
+			}
+
+			/* Style the navigation bar links */
+			.navbar a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+			}
+
+			/* Right-aligned link */
+			.navbar a.right {
+				float: right;
+			}
+
+			/* Change color on hover */
+			.navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+
+			/* Active/current link */
+			.navbar a.active {
+				background-color: #666;
+				color: white;
+			}
+
+			/* Column container */
+			.row {
+				display: -ms-flexbox; /* IE10 */
+				display: flex;
+				-ms-flex-wrap: wrap; /* IE10 */
+				flex-wrap: wrap;
+			}
+
+			/* Create two unequal columns that sits next to each other */
+			/* Sidebar/left column */
+			.side {
+				-ms-flex: 30%; /* IE10 */
+				flex: 30%;
+				background-color: #f1f1f1;
+				padding: 20px;
+			}
+
+			/* Main column */
+			.main {
+				-ms-flex: 70%; /* IE10 */
+				flex: 70%;
+				background-color: white;
+				padding: 20px;
+			}
+
+			/* Fake image, just for this example */
+			.fakeimg {
+				background-color: #aaa;
+				width: 100%;
+				padding: 20px;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 20px;
+				text-align: center;
+				background: #ddd;
+			}
+
+			/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+			@media screen and (max-width: 700px) {
+				.row {
+					flex-direction: column;
+				}
+			}
+
+			/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+			@media screen and (max-width: 400px) {
+				.navbar a {
+					float: none;
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="hidden">
+				<ul>
+					<h1><a href="#works" class="nav-item">Works</a></h1>
+					<h2><a href="#blog" class="nav-item">Blog</a></h2>
+					<h3><a href="#contact" class="nav-item">Contact</a></h3>
+				</ul>
+			</nav>
+		</header>
+		<img
+			class="hero__image"
+			src="./images/activestates.jpg"
+			alt="john.png "
+		/>
+		<div>
+			<p>
+				Hi, I am John, Creative Technologist Amet minim mollit non
+				deserunt ullamco est sit aliqua dolor do amet sint. Velit
+				officia consequat duis enim velit mollit. Exercitation veniam
+				consequat sunt nostrud amet.
+			</p>
+		</div>
+		<div class="posts__container">
+			<h3 class="posts__title">Making a design system from scratch</h3>
+			<header class="posts__infos">
+				<p>12 feb 2020</p>
+				<div class="header">
+					<h1>My Website</h1>
+					<p>A <b>responsive</b> website created by me.</p>
+				</div>
+
+				<div class="navbar">
+					<a href="#" class="active">Home</a>
+					<a href="#">Link</a>
+					<a href="#">Link</a>
+					<a href="#" class="right">Link</a>
+				</div>
+
+				<header class="row">
+					<div class="side">
+						<h2>About Me</h2>
+						<h5>Photo of me:</h5>
+						<div class="fakeimg" style="height: 200px">Image</div>
 						<p>
-							Hi, I am John, Creative Technologist
-							Amet minim mollit non deserunt ullamco est sit aliqua
-							dolor do amet sint. Velit officia consequat duis enim
-							velit mollit. Exercitation veniam consequat sunt nostrud
-							amet.
+							Some text about me in culpa qui officia deserunt
+							mollit anim..
+						</p>
+						<h3>More Text</h3>
+						<p>Lorem ipsum dolor sit ame.</p>
+						<div class="fakeimg" style="height: 60px">Image</div>
+						<br />
+						<div class="fakeimg" style="height: 60px">Image</div>
+						<br />
+						<div class="fakeimg" style="height: 60px">Image</div>
+					</div>
+					<div class="main">
+						<h2>TITLE HEADING</h2>
+						<h5>Title description, Dec 7, 2017</h5>
+						<div class="fakeimg" style="height: 200px">Image</div>
+						<p>Some text..</p>
+						<p>
+							Sunt in culpa qui officia deserunt mollit anim id
+							est laborum consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco.
+						</p>
+						<br />
+						<h2>TITLE HEADING</h2>
+						<h5>Title description, Sep 2, 2017</h5>
+						<div class="fakeimg" style="height: 200px">Image</div>
+						<p>Some text..</p>
+						<p>
+							Sunt in culpa qui officia deserunt mollit anim id
+							est laborum consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco.
 						</p>
 					</div>
-							<div class="posts__container">
-							<h3 class="posts__title">
-										Making a design system from scratch
-									</h3>
-									<head class="posts__infos">
-										<p>12 feb 2020</p>
-										<meta charset="UTF-8">
+				</header>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+				<div class="footer">
+					<h2>Footer</h2>
+				</div>
 
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+				<svg
+					width="2"
+					height="21"
+					viewBox="0 0 2 21"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path d="M1 0V21" stroke="black" />
+				</svg>
 
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
+				<p>Design, pattern</p>
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
+				<p class="posts__abstract">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+					Aperiam, aliquam. Officiis harum fugiat eum consectetur eius
+					fuga, dolore ratione, quibusdam optio, adipisci voluptatibus
+					obcaecati explicabo!
+				</p>
 
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Active/current link */
-.navbar a.active {
-  background-color: #666;
-  color: white;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
-</head>
-
-<div class="header">
-  <h1>My Website</h1>
-  <p>A <b>responsive</b> website created by me.</p>
-</div>
-
-<div class="navbar">
-  <a href="#" class="active">Home</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
-</div>
-
-<head class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
-  </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</head>
-</div>
-
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-
-			
-										<svg
-											width="2"
-											height="21"
-											viewBox="0 0 2 21"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path d="M1 0V21" stroke="black" />
-										</svg>
-			
-										<p>Design, pattern</p>
-									</div>
-			
-									<p class="posts__abstract">
-										Lorem ipsum dolor sit amet consectetur, adipisicing
-										elit. Aperiam, aliquam. Officiis harum fugiat eum
-										consectetur eius fuga, dolore ratione, quibusdam
-										optio, adipisci voluptatibus obcaecati explicabo!
-									</p>
-								</div>
-								
-									<h3 class="posts__title">
-										Creating a pixel perfect icons in Figma
-									</h3>
-									<div class="posts__infos">
-										<p>12 feb 2020</p>
-										<p>Figma, Icon Design</p>
-									 
-									</div>
-									<p class="posts__abstract">
-										Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Fugit inventore sequi laudantium id esse eum
-										aliquid eaque? Officiis enim ab maiores distinctio,
-										commodi soluta a!
-									</p>
-							<h2>Featured works</h2>
+				<h3 class="posts__title">
+					Creating a pixel perfect icons in Figma
+				</h3>
+				<div class="posts__infos">
+					<p>12 feb 2020</p>
+					<p>Figma, Icon Design</p>
+				</div>
+				<p class="posts__abstract">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Fugit inventore sequi laudantium id esse eum aliquid eaque?
+					Officiis enim ab maiores distinctio, commodi soluta a!
+				</p>
+				<h2>Featured works</h2>
+				<div>
+					<img
+						src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2F4086187%2Fcover_image%2Fretina_300x120%2Fcover-0823-DashboardDesign-Dan-Newsletter-f1fd5ef7b7a83bac31ed5ecdaa44017f.png"
+						alt="Dashboard.png "
+					/>
+					<div>
+						<h3>Designing Dashboard</h3>
 						<div>
-						<img src=" https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2F4086187%2Fcover_image%2Fretina_300x120%2Fcover-0823-DashboardDesign-Dan-Newsletter-f1fd5ef7b7a83bac31ed5ecdaa44017f.png  " alt"Dashboard.png "/>
-						</div>
-							<h3>Designing Dashboard</h3>
-							<div>
 							<p>2020</p>
 							<p>Dashboard</p>
-
-							</div>
-							<p>
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Ducimus eius voluptatibus, non
-								enim, perferendis ipsam earum fuga, ad facilis
-								placeat quibusdam magni perspiciatis aliquid.
-								Praesentium!
-							</p>
 						</div>
-						<div>
-							<h3>Vibrant portraits of 2020</h3>
-							<div>
-								<p>2018</p>
-								<p>Illustration</p>
-							</div>
-							<p>
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Ducimus eius voluptatibus, non
-								enim, perferendis ipsam earum fuga, ad facilis
-								placeat quibusdam magni perspiciatis aliquid.
-								Praesentium!
-							</p>
-						</div>
-						<div>
-							<h3>36 days of Malayalam type</h3>
-							<div>
-								<p>2018</p>
-								<p>Typography</p>
-							</div>
-							<p>
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Ducimus eius voluptatibus, non
-								enim, perferendis ipsam earum fuga, ad facilis
-								placeat quibusdam magni perspiciatis aliquid.
-								Praesentium!
-							</p>
-						</div>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Ducimus eius voluptatibus, non enim,
+							perferendis ipsam earum fuga, ad facilis placeat
+							quibusdam magni perspiciatis aliquid. Praesentium!
+						</p>
 					</div>
-					<div></div>
-					<div></div>
+					<div>
+						<h3>Vibrant portraits of 2020</h3>
+						<div>
+							<p>2018</p>
+							<p>Illustration</p>
+						</div>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Ducimus eius voluptatibus, non enim,
+							perferendis ipsam earum fuga, ad facilis placeat
+							quibusdam magni perspiciatis aliquid. Praesentium!
+						</p>
+					</div>
+					<div>
+						<h3>36 days of Malayalam type</h3>
+						<div>
+							<p>2018</p>
+							<p>Typography</p>
+						</div>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Ducimus eius voluptatibus, non enim,
+							perferendis ipsam earum fuga, ad facilis placeat
+							quibusdam magni perspiciatis aliquid. Praesentium!
+						</p>
+					</div>
 				</div>
-			</section>
-		<footer>
-			<div>
-				<img src="" alt="" /><img src="" alt="" /><img
-					src=""
-					alt=""
-				/><img src="" alt="" />
-			</div>
-			<p>Copyright @2020 All rights reserved</p>
-		</footer>
+				<footer>
+					<div>
+						<img src="" alt="" /><img src="" alt="" /><img
+							src=""
+							alt=""
+						/><img src="" alt="" />
+					</div>
+					<p>Copyright @2020 All rights reserved</p>
+				</footer>
+			</header>
+		</div>
 	</body>
 </html>
